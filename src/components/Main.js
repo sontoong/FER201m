@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import ListOfPlayer from "../Share/ListOfPlayer";
-import PlayersPresentation from "./PlayersPresentation";
+import React, { Component } from 'react'
+import  ListOfPlayer  from '../Share/ListOfPlayer'
+import PlayersPresentation from './PlayersPresentation'
 
-class Main extends Component {
-  constructor() {
-    super();
-    this.state = {
-      players: ListOfPlayer,
-    };
-  }
-  render() {
-    return <PlayersPresentation players={this.state.players} />;
-  }
+class Main extends Component{
+    constructor() {
+        super();
+        this.state ={
+            players: ListOfPlayer
+        };
+    }
+    render() {
+        return <PlayersPresentation players={this.state.players}/>
+    }
 }
 
-export default Main;
+export default Main
