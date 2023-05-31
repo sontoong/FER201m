@@ -1,10 +1,11 @@
 import React from "react";
+import Navigation from "./Components/Navigation";
+import Player from "./Components/Player";
+import Footer from "./Components/Footer";
+import Main from "./Components/Main";
 import "./App.css";
-import Navigation from "./components/Navigation";
-import Main from "./components/Player";
-import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Navigation />
@@ -12,6 +13,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
