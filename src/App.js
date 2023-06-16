@@ -1,16 +1,10 @@
 import './App.css';
-import AddUser from './Components/AddUser';
-import Navigation from './Components/Navigation';
-import User from './Components/User';
+import Contact from './Components/Contact';
 
 function App() {
   return (
-    <div className='App'>
-      <Navigation/>
-      <div className='App-content'>
-        <AddUser/>
-        <User/>
-      </div>
+    <div>
+      <Contact/>
     </div>
   );
 }
