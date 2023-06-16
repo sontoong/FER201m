@@ -9,7 +9,7 @@ const Detail = () => {
   });
   let cost = player.cost.toLocaleString();
   return (
-    <div className="container">
+    <div className="details-container">
       <div className="product-card">
         <div className="head">
           <div className="badge">{player.name}</div>

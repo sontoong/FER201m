@@ -1,53 +1,40 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { Navbar, NavItem, Icon } from "react-materialize";
 import "../App.css";
 import { ThemeContext } from "./ThemeContext";
 
 function Navigation() {
   const { theme, toggle, dark } = useContext(ThemeContext);
   return (
-    <div className="NavBar" style={{ backgroundColor: theme.backgroundColor }}>
-      <nav>
-        <ul>
-          <li>
-            <a className="active" href="#home" style={{ color: theme.color }}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#news" style={{ color: theme.color }}>
-              News
-            </a>
-          </li>
-          <li>
-            <a href="#about" style={{ color: theme.color }}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#contact" style={{ color: theme.color }}>
-              Contact
-            </a>
-          </li>
-        </ul>
-        <div style={{ position: "relative" }}>
-          {" "}
-          <a
-            className="switch-mode"
-            href="#"
-            onClick={toggle}
-            style={{
-              backgroundColor: theme.backgroundColor,
-              color: theme.color,
-              outline: "none",
-              textDecoration: "none",
-            }}
-            data-testid="toggle-theme-btn"
-          >
-            Switch Nav to {!dark ? "Dark" : "Light"} mode
-          </a>
-        </div>
-      </nav>
-    </div>
+    <Navbar
+      className="menu"
+      alignLinks="right"
+      brand={<span className="brand-logo">Player Cards</span>}
+      id="mobile-nav"
+      menuIcon={<Icon>menu</Icon>}
+    >
+      <li>
+        <Link to="/">
+          <Icon left>home</Icon>Home
+        </Link>
+      </li>
+      <li to="/news">
+        <a href="#news">
+          <Icon left>info_outline</Icon>News
+        </a>
+      </li>
+      <li to="/about">
+        <a href="#about">
+          <Icon left>dvr</Icon>About
+        </a>
+      </li>
+      <li to="/contact">
+        <a href="#contact">
+          <Icon left>contacts</Icon>Contact
+        </a>
+      </li>
+    </Navbar>
   );
 }
 
