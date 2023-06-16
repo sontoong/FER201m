@@ -2,7 +2,7 @@
 // import ListOfPlayer from '../Share/ListOfPlayer'
 
 // function PlayersPresentation ({players}) {
-//   const [player, setPlayer] = useState([])
+//   const [player, setPlayer] = useState([])  
 
 //     return (
 //       <div className='player-container'>
