@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "../App.css";
 import { ThemeContext } from "./ThemeContext";
 
@@ -9,22 +9,28 @@ function Navigation() {
       <nav>
         <ul>
           <li>
-            <a className="active" href="#home" style={{color: theme.color}}>
+            <a className="active" href="#home" style={{ color: theme.color }}>
               Home
             </a>
           </li>
           <li>
-            <a href="#news" style={{color: theme.color}}>News</a>
+            <a href="#news" style={{ color: theme.color }}>
+              News
+            </a>
           </li>
           <li>
-            <a href="#about" style={{color: theme.color}}>About</a>
+            <a href="#about" style={{ color: theme.color }}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#contact" style={{color: theme.color}}>Contact</a>
+            <a href="#contact" style={{ color: theme.color }}>
+              Contact
+            </a>
           </li>
         </ul>
         <div style={{ position: "relative" }}>
-                {" "}
+          {" "}
           <a
             className="switch-mode"
             href="#"
@@ -33,11 +39,11 @@ function Navigation() {
               backgroundColor: theme.backgroundColor,
               color: theme.color,
               outline: "none",
-              textDecoration: 'none'
+              textDecoration: "none",
             }}
             data-testid="toggle-theme-btn"
           >
-                  Switch Nav to {!dark ? "Dark" : "Light"} mode
+            Switch Nav to {!dark ? "Dark" : "Light"} mode
           </a>
         </div>
       </nav>
